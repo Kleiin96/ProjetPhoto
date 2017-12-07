@@ -48,13 +48,8 @@
 					  
 					<input type="password" name="email" value="email" onFocus="field_focus(this, 'email');" onblur="field_blur(this, 'email');" class="email" />
 					  
-					<div class="btn">
-						<a href="#">Connexion</a>
-					</div>
-					
-					<div id="btn2">
-						<a href="#" onclick="document.getElementById('id01').style.display='none'">Cancel</a>
-					</div>
+					<a id="btn" href="#">Connexion</a>
+					<a id="btn2" href="#" onclick="document.getElementById('id01').style.display='none'">Cancel</a>
 				</div>
 			</form>
 		</div> 
