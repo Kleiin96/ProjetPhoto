@@ -5,11 +5,12 @@
 </head>
 <body>
 
-    <form>
-        Courriel : <input type="text" name="Courriel" />
-        Mot de Passe : <input type="text" name="Password" />
-        Prénom :<input type="text" name="Prénom" />
-        Nom : <input type="text" name="Nom" />
+    <form method="post" action="inscriptionAdd.php">
+        Courriel : <input type="text" name="courriel" id="courriel"/>
+        Mot de Passe : <input type="text" name="password" id="password" />
+        Prénom :<input type="text" name="prenom" id="prenom" />
+        Nom : <input type="text" name="nom" id="nom"/>
+        <button type="submit">s'inscrire</button>
     </form>
 </body>
 </html>
