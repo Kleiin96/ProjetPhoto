@@ -33,11 +33,22 @@
 		  
 		<input type="password" name="email" placeholder="password" onFocus="field_focus(this, 'email');" onblur="field_blur(this, 'email');" class="email" />
 		  
-		<a id="btn" href="#">Connexion</a>
-		<a id="btn2" href="#" onclick="document.getElementById('id01').style.display='none'">Cancel</a>
+		<a id="btn" href="Login.php">Connexion</a>
+		<a id="btn2" href="inscription.php">S'inscrire</a>
 	</div>
 </form>
 </div> 
+<script>
+    //Get the modal
+    var modal = document.getElementById('id01');
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+</script>
 <?php
 function nav($request)
 {
