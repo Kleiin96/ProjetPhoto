@@ -5,9 +5,7 @@
 		<title>BG Photographie</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="css/icomoon.css">
 		<link rel="stylesheet" href="css/slideshow.css">
-		<script src="js/jquery.min.js"></script>
 		<script src="js/main.js"></script>
 		<link rel="stylesheet" href="css/style.css">
 		
@@ -20,16 +18,23 @@
 		  <div class="mySlides fade">
 		    <div class="numbertext">1 / 3</div>
 		    <img src="images/carrousel1.jpg" style="width:100%">
+		    <div class="overlay"></div>
+  		  	<div class="buttonReserver"><a href="#"> Réserver une séance </a></div>
 		  </div>
+		  
 		
 		  <div class="mySlides fade">
 		    <div class="numbertext">2 / 3</div>
 		    <img src="images/carrousel2.jpg" style="width:100%">
+		    <div class="overlay"></div>
+  		  	<div class="buttonReserver"><a href="#"> Réserver une séance </a></div>
 		  </div>
 		
 		  <div class="mySlides fade">
 		    <div class="numbertext">3 / 3</div>
 		    <img src="images/carrousel3.jpg" style="width:100%">
+		    <div class="overlay"></div>
+  		  	<div class="buttonReserver"><a href="#"> Réserver une séance </a></div>
 		  </div>
 		
 		  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>

@@ -342,7 +342,7 @@ div.connexionButton ul{
 }
 
 .logo{
-	padding-left:170px;
+	padding-left:200px;
 }
 
 .modal {
@@ -468,8 +468,6 @@ border-radius: 30px;
 }
 
 .login{
-	margin: 0 auto 0 auto;  
-  width:100%; 
   text-align:center;
   margin: 20px 0px 20px 0px;
 }
@@ -478,13 +476,12 @@ border-radius: 30px;
 	text-decoration:none;
 }
 
-.proposMarge{
-	padding-left:150px;
-}
-
 .photographe{
 	width:250px;
 	height:300px;
+	float:left;
+	margin-right:20px;
+	margin-bottom:20px;
 }
 
 .message{
@@ -499,5 +496,44 @@ border-radius: 30px;
   font-size:1em;
   border-radius:4px;
   margin-bottom:50px;
+}
+
+/* bouton reserver */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+}
+
+.slideshow-container:hover .overlay {
+  display: block;
+  background: rgba(0, 0, 0, .3);
+}
+
+.buttonReserver {
+  position: absolute;
+  width: 500px;
+  left:250px;
+  top: 700px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.buttonReserver a {
+  width: 200px;
+  padding: 12px 48px;
+  text-align: center;
+  color: white;
+  border: solid 2px white;
+  z-index: 1;
+}
+
+.slideshow-container:hover .buttonReserver {
+  opacity: 1;
 }
 
