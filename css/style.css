@@ -471,10 +471,33 @@ border-radius: 30px;
 	margin: 0 auto 0 auto;  
   width:100%; 
   text-align:center;
-  margin: 20px 0px 20px 0px; 
+  margin: 20px 0px 20px 0px;
 }
 
 .btn:visited{
 	text-decoration:none;
+}
+
+.proposMarge{
+	padding-left:150px;
+}
+
+.photographe{
+	width:250px;
+	height:300px;
+}
+
+.message{
+	background:#ecf0f1;
+  border: #ccc 1px solid;
+  border-bottom: #ccc 2px solid;
+  padding: 8px;
+  width:75%;
+  height:200px;
+  color:#AAAAAA;
+  margin-top:10px;
+  font-size:1em;
+  border-radius:4px;
+  margin-bottom:50px;
 }
 

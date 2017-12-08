@@ -13,46 +13,7 @@
 		
 	</head>
 	<body>
-		<header>
-			<div class="fh5co-navbar-brand text-center">
-				<a href="accueil.html" class="logo"><img src="images/bglogo.png" alt="logo"></a>
-				<div class="topBotomBordersOut connexionButton">
-					<ul>
-						<li><a href="#" onclick="document.getElementById('id01').style.display='block'" class="inactive ">Connexion</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="container text-center topBotomBordersOut">
-				
-				<nav id="fh5co-main-nav">
-					<ul>
-						<li><a href="accueil.html" class="active">Accueil</a></li>
-						<li><a href="studio.html" class="inactive">Studio</a></li>
-						<li><a href="mariage.html" class="inactive" >Mariage</a></li>
-						<li><a href="portrait.html" class="inactive">Portrait</a></li>
-						<li><a href="art.html" class="inactive">Art</a></li>
-						<li><a href="propos.html" class="inactive">À propos</a></li>
-						<li><a href="contact.html" class="inactive">Contact</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
-		<div id="id01" class="modal">
-		  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-		
-			 <form class="login" method="post" action="index.html">
-				<div class="box">
-					<h1 class="title">Connexion</h1>
-					
-					<input type="email" name="email" value="email" onFocus="field_focus(this, 'email');" onblur="field_blur(this, 'email');" class="email" />
-					  
-					<input type="password" name="email" value="email" onFocus="field_focus(this, 'email');" onblur="field_blur(this, 'email');" class="email" />
-					  
-					<a id="btn" href="#">Connexion</a>
-					<a id="btn2" href="#" onclick="document.getElementById('id01').style.display='none'">Cancel</a>
-				</div>
-			</form>
-		</div> 
+		<?php include "header.php" ?>
 		
 		<div class="slideshow-container">
 		
@@ -71,12 +32,10 @@
 		    <img src="images/carrousel3.jpg" style="width:100%">
 		  </div>
 		
-		  <!-- Next and previous buttons -->
 		  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 		  <a class="next" onclick="plusSlides(1)">&#10095;</a>
 		</div>
 		
-		<!-- The dots/circles -->
 		<div style="text-align:center">
 		  <span class="dot" onclick="currentSlide(1)"></span>
 		  <span class="dot" onclick="currentSlide(2)"></span>
