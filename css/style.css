@@ -46,6 +46,7 @@ a {
 }
 a:hover {
   text-decoration: none;
+  color: #F03861;
 }
 a:focus, a:active {
   outline: none;
@@ -359,7 +360,7 @@ div.connexionButton ul{
 }
 
 .modal-content {
-    background-color: #FFF;
+    background-color: #fefefe;
     margin: 5px auto; 
     border: 1px solid #888;
     width: 80%; 
@@ -426,7 +427,7 @@ div.connexionButton ul{
   font-size:1em;
 }
 
-.btn{
+#btn{
   background:#000;
   width:125px;
   padding-top:5px;
@@ -442,8 +443,9 @@ div.connexionButton ul{
   
 }
 
-.btn:hover{
+#btn:hover{
   background:#666666; 
+  border-radius: 30px;
 }
 
 #btn2{
@@ -451,18 +453,18 @@ div.connexionButton ul{
   background:#000;
   width:125px;  padding-top:5px;
   padding-bottom:5px;
-  color:#FFF;
+  color:white;
   
   margin-top:20px;
   margin-bottom:20px;
   margin-left:10px;
   font-weight:800;
   font-size:0.8em;
-  text-decoration: none;
 }
 
 #btn2:hover{ 
 background:#666666; 
+border-radius: 30px;
 }
 
 .login{
@@ -470,5 +472,9 @@ background:#666666;
   width:100%; 
   text-align:center;
   margin: 20px 0px 20px 0px; 
+}
+
+.btn:visited{
+	text-decoration:none;
 }
 
