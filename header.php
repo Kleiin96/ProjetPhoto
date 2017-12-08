@@ -29,9 +29,9 @@
 	<div class="box">
 		<h1 class="title">Connexion</h1>
 		
-		<input type="email" name="email" value="email" onFocus="field_focus(this, 'email');" onblur="field_blur(this, 'email');" class="email" />
+		<input type="email" name="email" placeholder="email" onFocus="field_focus(this, 'email');" onblur="field_blur(this, 'email');" class="email" />
 		  
-		<input type="password" name="email" value="email" onFocus="field_focus(this, 'email');" onblur="field_blur(this, 'email');" class="email" />
+		<input type="password" name="email" placeholder="password" onFocus="field_focus(this, 'email');" onblur="field_blur(this, 'email');" class="email" />
 		  
 		<a id="btn" href="#">Connexion</a>
 		<a id="btn2" href="#" onclick="document.getElementById('id01').style.display='none'">Cancel</a>

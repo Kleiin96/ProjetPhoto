@@ -52,7 +52,7 @@ class Utilisateur
 
     }
 
-    public function loginUser(){
+    public function loginUser($username , $pwd){
 
     }
 
