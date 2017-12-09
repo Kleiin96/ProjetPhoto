@@ -7,9 +7,10 @@
 
 
 
-<form action="" method="post">
-    Username : <input type="text" name="username"/><br/><br/>
-    Password :  <input type="text" name="username"/>
+<form action="loginAction.php" method="post">
+    Username : <input type="text" name="username" id="username"/><br/><br/>
+    Password :  <input type="text" name="password" id="password"/>
+    <button type="submit">envoyer</button>
 </form>
 
 <?php

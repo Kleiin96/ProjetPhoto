@@ -537,3 +537,22 @@ border-radius: 30px;
   opacity: 1;
 }
 
+.btn2{
+    float:left;
+    background:#000;
+    width:125px;  padding-top:5px;
+    padding-bottom:5px;
+    color:white;
+
+    margin-top:20px;
+    margin-bottom:20px;
+    margin-left:10px;
+    font-weight:800;
+    font-size:0.8em;
+}
+
+.btn2:hover{
+    background:#666666;
+    border-radius: 30px;
+}
+
