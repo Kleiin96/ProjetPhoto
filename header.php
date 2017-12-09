@@ -39,6 +39,13 @@ session_start();
 				<li><a href="art.php" <?=nav("art")?>>Art</a></li>
 				<li><a href="propos.php" <?=nav("propos")?>>À propos</a></li>
 				<li><a href="contact.php" <?=nav("contact")?>>Contact</a></li>
+                <?php
+                if(isset($_SESSION["username"])) {
+                ?>
+                    <li><a href="VosPhoto.php" <?=nav("VosPhoto")?>>Vos photos</a></li>
+                <?php
+                }
+                ?>
 			</ul>
 		</nav>
 	</div>
