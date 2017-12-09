@@ -21,7 +21,7 @@ include "header.php"
 if(isset($_SESSION["username"])) {
 
     ?>
-    <h1 class="title">Vous êtes inscrit</h1>
+    <h1 class="title">Vous êtes inscrit(e)</h1>
     <?php
 }else {
     ?>
