@@ -7,7 +7,7 @@
  */
 session_start();
 require_once 'Utilisateur.php';
-if(isset($_POST[username])) {
+if(isset($_POST['username'])) {
     $test = new Utilisateur('lul', 'lul', 'lul', 'lul');
     $test->loginUser($_POST['username'], $_POST['password']);
 }

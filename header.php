@@ -89,7 +89,7 @@ session_start();
                    data:{username:username, password:password},
                     success:function(data){
                        if (data == 'No'){
-                           alert("Wrong data");
+                           alert("Impossible de se connecter");
                        }else{
                            alert("connected");
                            $('#id01').hide();

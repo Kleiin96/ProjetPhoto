@@ -42,14 +42,14 @@ if(isset($_SESSION["username"])) {
 $(document).ready(function(){
    $('#allo').click(function(){
       var courriel = $('#courriel').val();
-      var password = $('#passwor').val();
+      var passwor = $('#passwor').val();
       var prenom = $('#prenom').val();
       var nom = $('#nom').val();
       if (courriel != '' && password != ''){
           $.ajax({
              url:"inscriptionAdd.php",
              method:"POST",
-             data:{courriel:courriel, password:password, prenom:prenom, nom:nom} ,
+             data:{courriel:courriel, passwor:passwor, prenom:prenom, nom:nom} ,
               success:function(data){
                  location.reload();
               }
