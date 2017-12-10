@@ -28,10 +28,18 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
         $result=$conn->query($selectLastPhoto);
         $row = $result->fetch_assoc();
         $idPhoto=$row['cpt'];
-        
+        echo $idPhoto;
         $idPhoto++;
-        $IncrementCompteur="Update compteur SET cpt=".$idPhoto."WHERE nomTable='photo'";
-        mysqli_query($conn,$IncrementCompteur);
+        echo "<br/>";
+        echo $idPhoto;
+        
+        $IncrementCompteur="Update compteur SET cpt=".$idPhoto." WHERE nomTable='photo'";
+        if (mysqli_query($conn, $IncrementCompteur)) {
+            echo "Record updated successfully";
+        } else {
+            echo "Error updating record: " . mysqli_error($conn);
+        }
+        
         $sql = "INSERT INTO photo (idPhoto,nomPhoto,imagePhoto) VALUES ($idPhoto,'$imagename','$imagetmp')";
         echo $imagename."<br/>";
         
