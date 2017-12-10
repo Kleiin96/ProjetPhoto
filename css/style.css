@@ -562,3 +562,8 @@ border-radius: 30px;
 
 }
 
+form{
+	border-style:solid;
+	border-width:1px;
+}
+
