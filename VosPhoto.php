@@ -14,7 +14,7 @@
 <?php include "header.php" ?>
 <div class="col-sm-6 padding-left">
     <div class="photoMain fade contain">
-        <img id="expandedImg" style="width: 100%" style="height: 100%">
+        <img  src="images/studio1.jpg" id="expandedImg" style="width: 100%" style="height: 100%">
     </div>
     <div class="description">Studio</div>
 </div>

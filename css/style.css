@@ -534,7 +534,7 @@ div.connexionButton ul{
 
 .contain{
     position: relative;
-    display: none;
+    display: block;
 }
 
 form{
