@@ -13,8 +13,12 @@
 	<body>
 		<?php include "header.php" ?>
 		<div class="col-sm-6 padding-left">
-			<div class="photoMain fade"><img src="images/studio1.jpg"></div>
-			<div class="description">Studio</div>
+			<form action="upload.php" method="post" enctype="multipart/form-data">
+    			Image:
+                <input type="file" name="fileToUpload" id="fileToUpload">
+                <br/>
+                <input type="submit" value="Ajouter" name="submit" class="btn2">
+			</form>
 		</div>
 		
 		<div class="col-sm-6 margin-bottom">

@@ -14,6 +14,8 @@ class Utilisateur
     public $nameUser = '';
     public $passwordUser = '';
 
+
+
     public function Utilisateur($_email, $_prenom,$_name,$_password){
         $this->EmailUser = $_email;
         $this->prenomUser = $_prenom;
@@ -32,6 +34,35 @@ class Utilisateur
 
 
         $stmt->execute();
+        $_SESSION["username"]= $this->EmailUser ;
+
+
+        // Send an error message if the query failed.
+        $stmt->close();
+
+        $conn->close();
+    }
+
+    public function loginUser($username , $pwd){
+        $test1= new DbConnection();
+        $conn = $test1->getdbconnect();
+
+        $stmt= $conn->prepare( "Select * from utilisateur WHERE courriel = ? AND password = ?") ;
+        $stmt->bind_param("ss", $username, $pwd);
+
+
+
+        $stmt->execute();
+
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0) {
+            $_SESSION["username"]=$username;
+            echo 'Yes';
+        } else {
+            echo "No";
+        }
+
 
 
         // Send an error message if the query failed.
@@ -52,9 +83,7 @@ class Utilisateur
 
     }
 
-    public function loginUser($username , $pwd){
 
-    }
 
 }
 ?>
