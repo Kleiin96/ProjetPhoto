@@ -11,7 +11,7 @@ session_start();
 
             ?>
             <li class="profil">Bienvenue <?php echo $_SESSION["username"] ?></li>
-            <li class="profil"> <a href="#" id="logout" class="inactive">Déconnexion</a> </li>
+            <li class="profil"> <a href="accueil.php" id="logout" class="inactive">Déconnexion</a> </li>
             
             <?php
                 }else {
