@@ -17,10 +17,10 @@
     			Image:
                 <input type="file" name="fileToUpload" id="fileToUpload">
                 <br/>
-                <input type="submit" value="Ajouter" name="submit" class="btn2">
+                <input id='lul' type="submit" value="Ajouter" name="submit" class="btn2">
 			</form>
 		</div>
-		
+
 		<div class="col-sm-6 margin-bottom">
 			<div class="photo fade"><img src="images/studio1.jpg"></div>
 			<div class="photo fade"><img src="images/studio2.jpg"></div>
