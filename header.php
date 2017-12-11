@@ -93,14 +93,16 @@ session_start();
                    data:{username:username, password:password},
                     success:function(data){
                        if (data == 'No'){
-                           alert("Impossible de se connecter");
+                           alert("Le email ou le mot de passe n'est pas valide");
                        }else{
-                           alert("connected");
                            $('#id01').hide();
                            location.reload();
                        }
                     }
                 });
+            }
+            else{
+            	alert("Le email ou le mot de passe n'est pas valide");
             }
         });
         $('#logout').click(function(){
@@ -110,7 +112,6 @@ session_start();
                 method:"POST",
                 data:{action:action},
                 success:function(data){
-                    alert('disconnected')
                     location.reload();
                 }
             })
