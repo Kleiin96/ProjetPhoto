@@ -38,6 +38,9 @@ if(isset($_SESSION["username"])) {
 }
 
 ?>
+
+<?php include "footer.php" ?>
+
 <script>
 $(document).ready(function(){
    $('#allo').click(function(){

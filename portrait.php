@@ -29,11 +29,7 @@
 			<div class="photo fade"><img src="images/studio9.jpg"></div>
 		</div>
 		
-		<footer class="text-center">
-			<a href="#" class="fa fa-facebook"></a>
-			<a href="#" class="fa fa-instagram"></a>
-			<a href="#" class="fa fa-vimeo"></a>
-		</footer>
+		<?php include "footer.php" ?>
 
 	</body>
 </html>

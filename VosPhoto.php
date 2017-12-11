@@ -46,11 +46,7 @@
     }
 </script>
 
-<footer class="text-center">
-    <a href="#" class="fa fa-facebook"></a>
-    <a href="#" class="fa fa-instagram"></a>
-    <a href="#" class="fa fa-vimeo"></a>
-</footer>
+<?php include "footer.php" ?>
 
 </body>
 </html>

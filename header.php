@@ -3,20 +3,21 @@ session_start();
 ?>
 <header>
 <div class="fh5co-navbar-brand text-center">
-	<a href="accueil.html" class="logo"><img src="images/bglogo.png" alt="logo"></a>
+	<a href="accueil.php" class="logo"><img src="images/bglogo.png" alt="logo"></a>
 	<div class="topBotomBordersOut connexionButton">
 		<ul>
             <?php
                 if(isset($_SESSION["username"])) {
 
             ?>
-            <li>Welcome <?php echo $_SESSION["username"] ?> <br/>
-            <a href="#" id="logout">Logout</a></li>
+            <li>Bienvenue <?php echo $_SESSION["username"] ?></li>
+            <li> <a href="#" id="logout" class="inactive">Déconnection</a> </li>
+            <li><a href="VosPhoto.php" <?=nav("VosPhoto")?>>Vos photos</a></li>
             <?php
                 }else {
                     ?>
 
-                    <li><a href="#" onclick="document.getElementById('id01').style.display='block'" class="inactive ">Connexion</a>
+                    <li><a href="#" onclick="document.getElementById('id01').style.display='block'" class="inactive">Connexion</a>
                     </li>
 
                     <?php
@@ -39,13 +40,6 @@ session_start();
 				<li><a href="art.php" <?=nav("art")?>>Art</a></li>
 				<li><a href="propos.php" <?=nav("propos")?>>À propos</a></li>
 				<li><a href="contact.php" <?=nav("contact")?>>Contact</a></li>
-                <?php
-                if(isset($_SESSION["username"])) {
-                ?>
-                    <li><a href="VosPhoto.php" <?=nav("VosPhoto")?>>Vos photos</a></li>
-                <?php
-                }
-                ?>
 			</ul>
 		</nav>
 	</div>
@@ -61,8 +55,8 @@ session_start();
 		  
 		<input id="password" type="password" name="password" placeholder="password"  class="email" />
 		  
-		<button type='button' id="btn"  class="login">Connexion</button>
-		<a id="btn2" href="inscription.php" class="login">S'inscrire</a>
+		<a id="btn" href="#" class="btn">Connexion</a>
+		<a id="btn2" href="inscription.php" class="btn2">S'inscrire</a>
 	</div>
 <!--</form>-->
 </div> 

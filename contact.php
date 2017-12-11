@@ -14,17 +14,14 @@
 		<?php include "header.php" ?>
 		<div class="padding-left">
 			<h1>Contactez-nous</h1>
-			<input type="text" name="nom" value="Nom" class="email" onclick="this.select();"/><br>
-		  	<input type="email" name="email" value="Email" class="email" onclick="this.select();"/><br>
-		  	<input type="text" name="sujet" value="Sujet" class="email" onclick="this.select();"/><br>
-		  	<textarea name="message" class="message" onclick="this.select();">Message</textarea><br>
+			<input type="text" name="nom" placeholder="Nom" class="email"/><br>
+		  	<input type="email" name="email" placeholder="Email" class="email"/><br>
+		  	<input type="text" name="sujet" placeholder="Sujet" class="email"/><br>
+		  	<textarea name="message" class="message" placeholder="Message"></textarea><br>
+		  	<a href="#" class="btn">Envoyer</a>
 		</div>
 		
-		<footer class="text-center">
-			<a href="#" class="fa fa-facebook"></a>
-			<a href="#" class="fa fa-instagram"></a>
-			<a href="#" class="fa fa-vimeo"></a>
-		</footer>
+		<?php include "footer.php" ?>
 
 	</body>
 </html>

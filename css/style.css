@@ -46,7 +46,6 @@ a {
 }
 a:hover {
   text-decoration: none;
-  color: #F03861;
 }
 a:focus, a:active {
   outline: none;
@@ -105,18 +104,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-selection {
-  color: #000;
-  background: #FFF;
+  color: #FFF;
+  background: #000;
 }
 
 ::-moz-selection {
-  color: #000;
-  background: #FFF;
+  color: #FFF;
+  background: #000;
 }
 
 ::selection {
-  color: #000;
-  background: #FFF;
+  color: #FFF;
+  background: #000;
 }
 
 header, #fh5co-intro-section, #fh5co-services-section, #fh5co-featured-work-section,
@@ -404,6 +403,7 @@ div.connexionButton ul{
   margin: 0 auto 0 auto;
   padding:0px 0px 70px 0px;
   border: #000 4px solid; 
+  text-align:center;
 }
 
 .email{
@@ -427,7 +427,7 @@ div.connexionButton ul{
   font-size:1em;
 }
 
-#btn{
+.btn{
   background:#000;
   width:125px;
   padding-top:5px;
@@ -440,40 +440,35 @@ div.connexionButton ul{
   margin-left:16px;
   font-weight:800;
   font-size:0.8em;
-  
+  text-align:center;
 }
 
-#btn:hover{
+.btn:hover{
   background:#666666; 
   border-radius: 30px;
 }
 
-#btn2{
-  float:left;
-  background:#000;
-  width:125px;  padding-top:5px;
-  padding-bottom:5px;
-  color:white;
-  
-  margin-top:20px;
-  margin-bottom:20px;
-  margin-left:10px;
-  font-weight:800;
-  font-size:0.8em;
-}
-
-#btn2:hover{ 
-background:#666666; 
-border-radius: 30px;
-}
-
-.login{
-  text-align:center;
-  margin: 20px 0px 20px 0px;
-}
-
 .btn:visited{
 	text-decoration:none;
+}
+
+.btn2{
+    float:left;
+    background:#000;
+    width:125px;  padding-top:5px;
+    padding-bottom:5px;
+    color:white;
+
+    margin-top:20px;
+    margin-bottom:20px;
+    margin-left:10px;
+    font-weight:800;
+    font-size:0.8em;
+}
+
+.btn2:hover{
+    background:#666666;
+    border-radius: 30px;
 }
 
 .photographe{
@@ -537,29 +532,9 @@ border-radius: 30px;
   opacity: 1;
 }
 
-.btn2{
-    float:left;
-    background:#000;
-    width:125px;  padding-top:5px;
-    padding-bottom:5px;
-    color:white;
-
-    margin-top:20px;
-    margin-bottom:20px;
-    margin-left:10px;
-    font-weight:800;
-    font-size:0.8em;
-}
-
-.btn2:hover{
-    background:#666666;
-    border-radius: 30px;
-}
-
 .contain{
     position: relative;
     display: none;
-
 }
 
 form{
@@ -567,3 +542,6 @@ form{
 	border-width:1px;
 }
 
+.icon:hover{
+	color:red;
+}
