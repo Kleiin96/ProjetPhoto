@@ -125,7 +125,6 @@ header, #fh5co-intro-section, #fh5co-services-section, #fh5co-featured-work-sect
 }
 
 header {
-  padding-top: 3em;
   box-shadow: 8px 8px 12px #aaa; 
   margin-bottom:50px;
 }
@@ -333,15 +332,14 @@ footer{
 
 .connexionButton{
 	float:right;
+	margin: 0;
+	width: 100%;
+text-align: right;
 }
 
 div.connexionButton ul{
 	list-style-type: none;
 	padding-right:50px;
-}
-
-.logo{
-	padding-left:200px;
 }
 
 .modal {
@@ -544,4 +542,15 @@ form{
 
 .icon:hover{
 	color:red;
+}
+
+.menu{
+	width:100%;
+}
+
+.profil{
+	list-style: none;
+  display: inline-block;
+  margin-left: 40px;
+  font-size: 18px;
 }

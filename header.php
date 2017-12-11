@@ -3,16 +3,16 @@ session_start();
 ?>
 <header>
 <div class="fh5co-navbar-brand text-center">
-	<a href="accueil.php" class="logo"><img src="images/bglogo.png" alt="logo"></a>
+	
 	<div class="topBotomBordersOut connexionButton">
 		<ul>
             <?php
                 if(isset($_SESSION["username"])) {
 
             ?>
-            <li>Bienvenue <?php echo $_SESSION["username"] ?></li>
-            <li> <a href="#" id="logout" class="inactive">Déconnection</a> </li>
-            <li><a href="VosPhoto.php" <?=nav("VosPhoto")?>>Vos photos</a></li>
+            <li class="profil">Bienvenue <?php echo $_SESSION["username"] ?></li>
+            <li class="profil"> <a href="#" id="logout" class="inactive">Déconnexion</a> </li>
+            
             <?php
                 }else {
                     ?>
@@ -28,8 +28,9 @@ session_start();
 
         </ul>
     </div>
+    <a href="accueil.php"><img src="images/bglogo.png" alt="logo"></a>
 	</div>
-	<div class="container text-center topBotomBordersOut">
+	<div class="menu text-center topBotomBordersOut">
 		
 		<nav id="fh5co-main-nav">
 			<ul>
@@ -40,6 +41,15 @@ session_start();
 				<li><a href="art.php" <?=nav("art")?>>Art</a></li>
 				<li><a href="propos.php" <?=nav("propos")?>>À propos</a></li>
 				<li><a href="contact.php" <?=nav("contact")?>>Contact</a></li>
+				<?php
+                if(isset($_SESSION["username"])) {
+
+            ?>
+            <li><a href="VosPhoto.php" <?=nav("VosPhoto")?>>Vos photos</a></li>
+            
+            <?php
+                }
+            ?>
 			</ul>
 		</nav>
 	</div>
