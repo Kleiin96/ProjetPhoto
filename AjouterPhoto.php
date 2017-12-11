@@ -36,7 +36,7 @@
 			                   contentType: false,
 			                   processData: false,
 			                   data:data,
-			                    success:function(data){
+			                   success:function(data){
 
 			                       console.log(data);
 			                    }
