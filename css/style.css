@@ -13,6 +13,7 @@
 
 .padding-left{
 	padding-left:60px;
+	margin-bottom: 50px;
 }
 
 .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
@@ -258,9 +259,8 @@ img {
   float: left;
   position: relative;
   overflow: hidden;
-  height:300px;
+  height:675px;
   width:100%;
-  background:#000;
 }
 
 .photoMain, .photoMain::before, .photoMain::after,
@@ -271,14 +271,7 @@ img {
 
 .photoMain img{
 	position: absolute;
-  height: 100%;
-  width:100%;
-  
-}
-
-.photoMain img:hover  {
-  -webkit-transform: scale(1.25);
-          transform: scale(1.25);
+  	max-width: 100%;
 }
 
 .description{
@@ -298,7 +291,7 @@ footer{
 }
 
 .margin-bottom{
-	margin-bottom:80px;
+	margin-bottom:10px;
 }
 
 .fa {
@@ -553,4 +546,18 @@ form{
   display: inline-block;
   margin-left: 40px;
   font-size: 18px;
+}
+
+.plusPhoto{
+	background:#000;
+    width:575px;  padding-top:5px;
+    padding-bottom:5px;
+    color:white;
+    margin-left: 15px;
+    text-align:center;
+}
+
+.plusPhoto:hover{
+	background:#666666;
+	color:#000;
 }

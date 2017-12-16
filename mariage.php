@@ -13,23 +13,25 @@
 <body>
 <?php include "header.php" ?>
 <div class="col-sm-6 padding-left">
-    <div class="photoMain fade contain">
-        <img  src="images/studio1.jpg" id="expandedImg" style="width: 100%" style="height: 100%">
+    <div class="photoMain contain">
+        <img  src="images/studio1.jpg" id="expandedImg" >
     </div>
     <div class="description">Studio</div>
 </div>
 
 <div class="col-sm-6 margin-bottom">
-    <div class="photo fade"><img src="images/studio1.jpg" onclick="openImg(this);"></div>
-    <div class="photo fade"><img src="images/studio2.jpg" onclick="openImg(this);"></div>
-    <div class="photo fade"><img src="images/studio3.jpg" onclick="openImg(this);"></div>
-    <div class="photo fade"><img src="images/studio4.jpg" onclick="openImg(this);"></div>
-    <div class="photo fade"><img src="images/studio5.jpg" onclick="openImg(this);"></div>
-    <div class="photo fade"><img src="images/studio6.jpg" onclick="openImg(this);"></div>
-    <div class="photo fade"><img src="images/studio7.jpg" onclick="openImg(this);"></div>
-    <div class="photo fade"><img src="images/studio8.jpg" onclick="openImg(this);"></div>
-    <div class="photo fade"><img src="images/studio9.jpg" onclick="openImg(this);"></div>
+    <div class="photo"><img src="images/studio1.jpg" onclick="openImg(this);"></div>
+    <div class="photo"><img src="images/studio2.jpg" onclick="openImg(this);"></div>
+    <div class="photo"><img src="images/studio3.jpg" onclick="openImg(this);"></div>
+    <div class="photo"><img src="images/studio4.jpg" onclick="openImg(this);"></div>
+    <div class="photo"><img src="images/studio5.jpg" onclick="openImg(this);"></div>
+    <div class="photo"><img src="images/studio6.jpg" onclick="openImg(this);"></div>
+    <div class="photo"><img src="images/studio7.jpg" onclick="openImg(this);"></div>
+    <div class="photo"><img src="images/studio8.jpg" onclick="openImg(this);"></div>
+    <div class="photo"><img src="images/studio9.jpg" onclick="openImg(this);"></div>
+    
 </div>
+<a href="#" class="col-sm-6 plusPhoto">En voir plus</a>
 
 <script>
     function openImg(imgs) {

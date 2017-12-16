@@ -13,12 +13,39 @@
 	<body>
 		<?php include "header.php" ?>
 		<div class="col-sm-6 padding-left">
-			<form action="upload.php" method="post" enctype="multipart/form-data">
+		<input type="file" name="fileToUpload" id="fileToUpload">
+		<input id='btnUpload' type="button" value="Ajouter" name="submit" class="btn2">
+			<!--<form action="upload.php" method="post" enctype="multipart/form-data">
     			Image:
                 <input type="file" name="fileToUpload" id="fileToUpload">
                 <br/>
                 <input id='lul' type="submit" value="Ajouter" name="submit" class="btn2">
-			</form>
+			</form>  -->
+			<script>
+			 $(document).ready(function(){
+			        $('#btnUpload').click(function(){
+
+			        	var data = new FormData();
+			        	jQuery.each(jQuery('#fileToUpload')[0].files, function(i, file) {
+			        	    data.append('file-'+i, file);
+			        	});
+			            if (data){
+			                $.ajax({
+			                   url:"upload.php",
+			                   method:"POST",
+			                   contentType: false,
+			                   processData: false,
+			                   data:data,
+			                   success:function(data){
+
+			                       console.log(data);
+			                    }
+			                });
+			            }
+			        });
+			 });
+			</script>
+			
 		</div>
 
 		<div class="col-sm-6 margin-bottom">
