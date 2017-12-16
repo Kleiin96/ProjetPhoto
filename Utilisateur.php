@@ -57,12 +57,15 @@ class Utilisateur
         $result = $stmt->get_result();
 
         if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
             $_SESSION["username"]=$username;
+            $_SESSION['nom'] = $row['nom'];
+            $_SESSION['prenom'] = $row['prenom'];
+            $_SESSION['admin'] = $row['admin'];
             echo 'Yes';
         } else {
             echo "No";
         }
-
 
 
         // Send an error message if the query failed.
