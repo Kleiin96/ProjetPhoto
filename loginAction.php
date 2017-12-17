@@ -15,5 +15,8 @@ if(isset($_POST['username'])) {
 if(isset($_POST["action"])) {
 
     unset($_SESSION["username"]);
+    unset($_SESSION["nom"]);
+    unset($_SESSION["prenom"]);
+    unset($_SESSION["admin"]);
 }
 ?>

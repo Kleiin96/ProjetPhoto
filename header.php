@@ -43,11 +43,16 @@ session_start();
 				<li><a href="contact.php" <?=nav("contact")?>>Contact</a></li>
 				<?php
                 if(isset($_SESSION["username"])) {
+                    if ($_SESSION["admin"] == 0) {
+                        ?>
+                        <li><a href="VosPhoto.php" <?= nav("VosPhoto") ?>>Vos photos</a></li>
 
-            ?>
-            <li><a href="VosPhoto.php" <?=nav("VosPhoto")?>>Vos photos</a></li>
-            
-            <?php
+                        <?php
+                    } else {
+                        ?>
+                        <li><a href="AjouterPhoto.php" <?= nav("AjouterPhoto") ?>>Ajouter photo</a></li>
+                        <?php
+                    }
                 }
             ?>
 			</ul>

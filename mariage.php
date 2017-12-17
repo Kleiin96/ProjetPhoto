@@ -29,6 +29,10 @@
     <div class="photo"><img src="images/studio7.jpg" onclick="openImg(this);"></div>
     <div class="photo"><img src="images/studio8.jpg" onclick="openImg(this);"></div>
     <div class="photo"><img src="images/studio9.jpg" onclick="openImg(this);"></div>
+    <?php
+        $test1= new DbConnection();
+        $conn = $test1->getdbconnect();
+    ?>
     
 </div>
 <a href="#" class="col-sm-6 plusPhoto">En voir plus</a>
