@@ -18,9 +18,16 @@
     </div>
     <div class="description">Studio</div>
 </div>
-
+<?php
+require_once 'Utilisateur.php';
+$test1= new DbConnection();
+$conn = $test1->getdbconnect();
+$sql = "SELECT nomPhoto FROM `photo` p inner join taalbumphoto t On p.idphoto = t.fkphoto 
+inner join album a on t.fkAlbum = a.idAlbum WHERE a.idAlbum=4";
+$result = $conn->query($sql);
+?>
 <div class="col-sm-6 margin-bottom">
-    <div class="photo"><img src="images/studio1.jpg" onclick="openImg(this);"></div>
+    <!--<div class="photo"><img src="images/studio1.jpg" onclick="openImg(this);"></div>
     <div class="photo"><img src="images/studio2.jpg" onclick="openImg(this);"></div>
     <div class="photo"><img src="images/studio3.jpg" onclick="openImg(this);"></div>
     <div class="photo"><img src="images/studio4.jpg" onclick="openImg(this);"></div>
@@ -28,8 +35,16 @@
     <div class="photo"><img src="images/studio6.jpg" onclick="openImg(this);"></div>
     <div class="photo"><img src="images/studio7.jpg" onclick="openImg(this);"></div>
     <div class="photo"><img src="images/studio8.jpg" onclick="openImg(this);"></div>
-    <div class="photo"><img src="images/studio9.jpg" onclick="openImg(this);"></div>
-    
+    <div class="photo"><img src="images/studio9.jpg" onclick="openImg(this);"></div>-->
+    <?php
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            echo '<div class="photo"><img src="' . $row["nomPhoto"] . '" onclick="openImg(this);"></div>';
+        }
+    }
+    $conn->close();
+    ?>
+
 </div>
 <a href="#" class="col-sm-6 plusPhoto">En voir plus</a>
 
