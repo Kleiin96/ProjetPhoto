@@ -561,3 +561,10 @@ form{
 	background:#666666;
 	color:#000;
 }
+
+.flotteru{
+    padding-top:15px;
+    padding-left:60px;
+    float:left;
+    border-color: #FFFFFF;
+}

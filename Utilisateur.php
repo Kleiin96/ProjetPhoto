@@ -40,6 +40,42 @@ class Utilisateur
         // Send an error message if the query failed.
         $stmt->close();
 
+        $idUser = 0;
+
+        $sql = "Select idUser from utilisateur";
+
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+
+            while($row = $result->fetch_assoc()) {
+                $idUser = $row["idUser"];
+            }
+        }
+
+
+
+        $conn->close();
+
+        $this->addAlbumUser($idUser);
+    }
+
+    public function addAlbumUser($id){
+
+        $test1= new DbConnection();
+        $conn = $test1->getdbconnect();
+
+        $query = "INSERT INTO album(nomAlbum, fkUtilisateur) 
+			Values (  'album" . $id . "' , " . $id . ") " ;
+
+        //echo $query;
+
+        $db_insert = mysqli_query($conn, $query);
+
+        // Send an error message if the query failed.
+        if (!$db_insert) {
+            die("Database insert failed: " . mysqli_error($conn));
+        }
+
         $conn->close();
     }
 
@@ -62,6 +98,7 @@ class Utilisateur
             $_SESSION['nom'] = $row['nom'];
             $_SESSION['prenom'] = $row['prenom'];
             $_SESSION['admin'] = $row['admin'];
+            $_SESSION['id'] = $row['idUser'];
             echo 'Yes';
         } else {
             echo "No";
