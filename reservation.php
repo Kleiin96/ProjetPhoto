@@ -17,14 +17,14 @@
 		<?php include "header.php" ?>
 		<div class="padding-left">
 			<h1>Réserver un rendez-vous</h1>
-			<input type="text" name="prenom" placeholder="Prénom" class="email"/>
-			<input type="text" name="nom" placeholder="Nom" class="email"/><br>
-			<input type="email" name="email" placeholder="Email" class="email"/><br>
-            Le <input class="datepicker email" name="date" type="text" placeholder="Date de la séance">
+			<input id="prenom" type="text" name="prenom" placeholder="Prénom" class="email"/>
+			<input id="nom" type="text" name="nom" placeholder="Nom" class="email"/><br>
+			<input id="email" type="email" name="email" placeholder="Email" class="email"/><br>
+            Le <input id="date" class="datepicker email" name="date" type="text" placeholder="Date de la séance">
              de <input id="debut" class="timepicker email" name="time" type="time" placeholder="Heure de début">
              à <input id="fin" class="timepicker email" name="time" type="time" placeholder="Heure de fin">
-            <textarea name="message" class="message" placeholder="Informations spéciales"></textarea><br>
-            <a href="#" class="btn">Envoyer</a>
+            <textarea id="message" name="message" class="message" placeholder="Message/Informations spéciales"></textarea><br>
+            <a id="btnEnvoyer" href="#" class="btn">Envoyer</a>
         	<div id="container"></div>
 		</div>
 		
@@ -83,6 +83,36 @@
     	  }
        	})
 
+       	$(document).ready(function(){
+            $('#btnEnvoyer').click(function(){
+
+                var nom = $('#prenom').val() + " " + $('#nom').val();
+                var from = $('#email').val();
+                var date = $('#date').val();
+                var timeDebut = $('#debut').val();
+                var timeFin = $('#fin').val();
+                var message= $('#message').val();
+                
+                if (nom != '' && from != '' && date != '' && timeDebut != '' && timeFin != '' && message != ''){
+                    $.ajax({
+                       url:"sendMail.php",
+                       method:"POST",
+                       data:{nom:nom, from:from, date:date, timeDebut:timeDebut, timeFin:timeFin, message:message},
+                        success:function(data){
+                           if (data == 'No '){
+                               alert("Le email n'est pas valide");
+                           }else{
+                        	   alert("Votre message a été envoyer. Merci!");
+                           }
+                        }
+                    });
+                }
+                else{
+                	alert("Veuillez remplir tout les champs");
+                }
+            });
+   
+        });
     </script>
 	</body>
 </html>
