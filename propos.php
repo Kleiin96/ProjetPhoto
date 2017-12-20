@@ -34,6 +34,8 @@
 			<p>Je suis Alexandre Bruneau-Genesse, j'ai commencé mon entreprise, il y a 3 ans. Mon travail se démarque par la diversité des photographies
             et de ma créativité pour créer un environnement propice à ressortir vos moments de gloire.</p>
 		</div>
+
+        <a href="Service.php">Liste de nos service</a>
 		
 		<?php include "footer.php" ?>
 

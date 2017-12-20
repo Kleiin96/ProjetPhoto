@@ -73,15 +73,15 @@ $stmt->execute();
 //echo $imagename."<br/>";
 
 //$db_insert=mysqli_query($conn,$sql);
-//  $last_id=$conn->insert_id;
+$last_id=$conn->insert_id;
 // Send an error message if the query failed.
 if (!$db_insert) {
     die("Database insert failed: " . mysqli_error($conn));
 
 }
-else{
-    // $sql="INSERT INTO taalbumphoto (fkAlbum,fkPhoto) VALUES ('$album','$last_id')";
-    // $db_insert=mysqli_query($conn,$sql);
 
-}
+    //$sql="INSERT INTO taalbumphoto (fkAlbum,fkPhoto) VALUES (1,'$last_id')";
+    //$db_insert=mysqli_query($conn,$sql);
+
+
 ?>
