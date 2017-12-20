@@ -46,33 +46,42 @@ if ($uploadOk == 0) {
 //$imagename= 'images/' + $_FILES["fileToUpload"]["name"];
 //$imagetmp=addslashes (file_get_contents($_FILES['fileToUpload']['tmp_name']));
 
-        $bd = new dbConnection();
-        $conn = $bd->getdbconnect();
-        $idPhoto=0;
-        //$selectLastPhoto="SELECT cpt FROM compteur WHERE nomTable='photo'";
-        //$result=$conn->query($selectLastPhoto);
-        //$row = $result->fetch_assoc();
-        //$idPhoto=$row['cpt'];
-        //echo $idPhoto;
-        //$idPhoto++;
-        //echo "<br/>";
-        //echo $idPhoto;
-        
-        /*$IncrementCompteur="Update compteur SET cpt=".$idPhoto." WHERE nomTable='photo'";
-        if (mysqli_query($conn, $IncrementCompteur)) {
-            echo "Record updated successfully";
-        } else {
-            echo "Error updating record: " . mysqli_error($conn);
-        }*/
-        
-        $sql = "INSERT INTO photo (nomPhoto) VALUES ('$target_file')";
-        //echo $imagename."<br/>";
-        
-        $db_insert=mysqli_query($conn,$sql);
-        // Send an error message if the query failed.
-        if (!$db_insert) {
-            die("Database insert failed: " . mysqli_error($conn));
+$bd = new dbConnection();
+$conn = $bd->getdbconnect();
+$idPhoto=0;
+//$selectLastPhoto="SELECT cpt FROM compteur WHERE nomTable='photo'";
+//$result=$conn->query($selectLastPhoto);
+//$row = $result->fetch_assoc();
+//$idPhoto=$row['cpt'];
+//echo $idPhoto;
+//$idPhoto++;
+//echo "<br/>";
+//echo $idPhoto;
 
-        
-    }
+/*$IncrementCompteur="Update compteur SET cpt=".$idPhoto." WHERE nomTable='photo'";
+if (mysqli_query($conn, $IncrementCompteur)) {
+    echo "Record updated successfully";
+} else {
+    echo "Error updating record: " . mysqli_error($conn);
+}*/
+
+$sql = "INSERT INTO photo (nomPhoto) VALUES ('$target_file')";
+$stmt = $conn->prepare("INSERT INTO photo (nomPhoto) VALUES (?)");
+$stmt->bind_param("s", $target_file);
+$stmt->execute();
+
+//echo $imagename."<br/>";
+
+//$db_insert=mysqli_query($conn,$sql);
+//  $last_id=$conn->insert_id;
+// Send an error message if the query failed.
+if (!$db_insert) {
+    die("Database insert failed: " . mysqli_error($conn));
+
+}
+else{
+    // $sql="INSERT INTO taalbumphoto (fkAlbum,fkPhoto) VALUES ('$album','$last_id')";
+    // $db_insert=mysqli_query($conn,$sql);
+
+}
 ?>

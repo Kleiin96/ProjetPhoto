@@ -41,7 +41,7 @@
                                 processData: false,
                                 data: data,
                                 success: function (data) {
-
+                                    alert('Photo Ajouté à la base de donnée!');
                                     console.log(data);
                                 }
                             });

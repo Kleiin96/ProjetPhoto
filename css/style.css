@@ -568,3 +568,23 @@ form{
     float:left;
     border-color: #FFFFFF;
 }
+
+.service{
+
+    border-style:solid;
+    border-width:2px;
+    border-color:black;
+    padding-top:35px;
+    padding-bottom:35px;
+}
+.numService{
+    float:left;
+    width:50px;
+}
+.nomService{
+
+}
+.prixService{
+    width:50px;
+    margin-top: -35px;
+}
